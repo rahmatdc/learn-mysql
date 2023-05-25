@@ -5,6 +5,7 @@ const express = require("express"); // Import express
 const app = express(); // Make express app
 /* Import routes */
 const customerRouter = require("./routes/customer");
+const booksRouter = require("./routes/books");
 /* Import errorHandler */
 //   const errorHandler = require("./middlewares/errorHandler");
 /* Enables req.body */
@@ -17,6 +18,7 @@ app.use(
 );
 /* Use the routes */
 app.use("/customers", customerRouter);
+app.use("/books", booksRouter);
 /* If route not found */
 app.all("*", (req, res, next) => {
   try {
