@@ -1,0 +1,2 @@
+# learn-mysql
+belajar slur
