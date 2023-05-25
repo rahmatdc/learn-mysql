@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get("/", findAllBooks);
 router.post("/", insertBooks);
-router.put("/", updateBooks);
-router.delete("/", destroyBooks);
+router.put("/:id", updateBooks);
+router.delete("/:id", destroyBooks);
 
 module.exports = router;
